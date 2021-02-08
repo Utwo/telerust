@@ -1,10 +1,8 @@
-use chrono;
 use rand::distributions::Alphanumeric;
-use rand::{thread_rng, Rng};
+use rand::Rng;
 use serde::Serialize;
 use slug::slugify;
-use sqlx::{FromRow, PgPool};
-use uuid::Uuid;
+use sqlx::{types::chrono, types::Uuid, FromRow, PgPool};
 
 // this struct will be used to represent database record
 #[derive(Serialize, FromRow)]
